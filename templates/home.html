@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/statics/style.css">
+    <link rel="icon" type="image/x-icon" href="./favicon-32x32.png">
+</head>
+<body>
+
+    <style>
+        #grey:hover {
+            background-color: gray;
+        }
+        #red:hover {
+            background-color: red;
+        }
+        #green:hover {
+            background-color: green;
+        }
+        #orange:hover {
+            background-color: orange;
+        }
+        #blue:hover {
+            background-color: blue;
+        }
+        #purple:hover {
+            background-color: purple;
+        }
+        #random {
+            background-color: white;
+        }
+        #random:hover {
+            background-color: gray;
+        }
+        #bartop {
+            background-color: yellow;
+            height: 200px;
+            border-radius: 5px;
+            position: relative;
+        }
+        #next:hover {
+            background-color: orange;
+        }
+        #up:hover {
+            background-color: orange;
+        }
+        #change_font:hover {
+            background-color: aqua;
+        }
+    </style>
+    <p>{{.st}}</p>
+    <div id="bartop">
+        <details>
+            <summary style="font-family: monospace;">Information</summary>
+
+            <h2 style="font-family: monospace;">Username: {{.Username}}</h2>
+            <h2 style="font-family: monospace;">Password: {{.Password}}</h2>
+            
+            <h2 style="font-family: monospace;">{{.ID}}</h2>
+            
+        </details>
+        <a href="/">log out</a>
+        
+        <center>
+            <h3 id="title">My Website</h3>
+        </center>
+       
+    </div>
+    
+    <br><br>
+    
+
+    <center>
+        <button class="box" id="grey" onclick="color('gray')">gray</button>
+        <button onclick="color('red')" id="red" class="box">red</button>
+        <button onclick="color('orange')" id="orange" class="box">orange</button>
+        
+        <button onclick="color('green')" id="green" class="box">green</button>
+        <button onclick="color('blue')" id="blue" class="box">blue</button>
+        <button onclick="color('purple')" id="purple" class="box">purple</button>
+        <button onclick="random()" id="random" class="box">random</button>
+    </center>
+    <br>
+    
+    <img src="/static/imgs/HTML_img.jpg" width="300px" height="300px" style="margin-left: 425px;" id="img">
+    <br>
+    <center>
+        <button id="up" style="width: 80px; height: 80px; font-size: 60px; border-radius: 20px;"> < </button>
+        <button id="change_font" style="width: 80px; height: 80px; font-size: 20px; border-radius: 20px;"> change font </button>
+        <button id="next" style="width: 80px; height: 80px; font-size: 60px; border-radius: 20px;"> > </button>
+        <p id="page_num"></p>
+    </center>
+    <br><br>      
+        <div id="background"></div>
+        
+    <script src="/statics/script.js"></script>
+    
+
+    
+</body>
+</html>
