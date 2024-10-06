@@ -6,7 +6,7 @@ let font_change = document.getElementById("change_font")
 
 let page_num = document.getElementById("page_num")
 
-let text = document.getElementById("background")
+let text = document.getElementById("text")
 
 
 const imgs = ["/statics/imgs/HTML_img.jpg", "/statics/imgs/golang-logo.webp", "/statics/imgs/css_img.png", "/statics/imgs/python_img.jpg"];
