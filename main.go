@@ -80,55 +80,6 @@ func getUser(username string, password string) (string, bool) {
 	}
 }
 
-func getUserClass(username string) ([]string, bool) {
-	var user User
-	err := db.QueryRow("SELECT * FROM users WHERE username = ?", username).Scan(&user.Id, &user.Username, &user.Password)
-	if err != nil {
-		if err == sql.ErrNoRows {
-			return []string{"User not found!"}, false
-		}
-		log.Println(err)
-		return []string{"Database error!"}, false
-	}
-	err2 := db.QueryRow("SELECT class_name FROM classes WHERE user_id = ?", user.Id).Scan(&user.class)
-
-	if err2 != nil {
-		if err2 == sql.ErrNoRows {
-			return []string{"Don't have class!"}, true
-		} else {
-			log.Fatal(err2)
-			return []string{"issue here!"}, false
-		}
-	}
-	x := []string{}
-	x = append(x, user.class)
-	return x, true
-}
-
-func putUserClass(username string, class string) bool {
-	var user User
-	err := db.QueryRow("SELECT user_id FROM users WHERE username = ?", username).Scan(&user.Id)
-	if err != nil {
-		if err == sql.ErrNoRows {
-			return false
-		}
-		log.Fatal(err)
-		return false
-	}
-
-	user1, err2 := db.Exec("INSERT INTO classes (user_id, class_name) VALUES (?, ?)", user.Id, class)
-
-	if err2 != nil {
-		log.Fatal(err2)
-		return false
-	}
-
-	log.Fatal(user1)
-
-	return true
-
-}
-
 func main() {
 
 	check := []int{}
