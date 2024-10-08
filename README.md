@@ -11,7 +11,7 @@ Enter your password, then type this command(you can use other name, but you need
 create database usersshark;
 
 Then use this command:
-use usershark;
+use usersshark;
 
 Then this:
 source table.sql;
