@@ -26,6 +26,6 @@ Then you will get this:
 |       1 | firstuser  | firstuser        |
 +---------+------------+------------------+
 
-Then you are good to go, you can go to localhost:8080 to see this website, to do this, you need type the URL:localhost:8080 in the webbrowser(this website only you and people in your network can see can see).
+Then you are good to go, you can go to localhost:8080 to see this website, to do this, you need type the URL:localhost:8080 in the webbrowser(this website only you and people in your network can see).
 
 Please click on raw button to see the this file.
