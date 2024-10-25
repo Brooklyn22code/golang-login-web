@@ -18,7 +18,6 @@ type User struct {
 	Id       int64  `json: id`
 	Username string `json: username`
 	Password string `json: password`
-	class    string `json: class`
 }
 
 func addUser(username string, password string) (string, bool) {
