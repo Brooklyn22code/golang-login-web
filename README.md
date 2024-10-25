@@ -1,4 +1,4 @@
-To run this website, you need follow command(Put your MySQL password into x):
+To run this website, you need follow command(Put your MySQL password into x, if you didn't install MySQL server, you need to install one):
 $env:DBPASS='x'
 
 Run the main.go:
@@ -25,5 +25,7 @@ Then you will get this:
 +---------+------------+------------------+
 |       1 | firstuser  | firstuser        |
 +---------+------------+------------------+
+
+Then you are good to go, you can go to localhost:8080 to see this website, to do this, you need type the URL:localhost:8080 in the webbrowser(this website only you and people in your network can see can see).
 
 Please click on raw button to see the this file.
